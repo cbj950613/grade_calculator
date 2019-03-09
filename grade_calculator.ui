@@ -6,91 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>659</width>
+    <height>444</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>grade_calculator</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="horizontalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>160</width>
-      <height>80</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>Hw1</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSlider" name="horizontalSlider">
-       <property name="maximum">
-        <number>100</number>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSpinBox" name="hw1spinbox">
-       <property name="maximum">
-        <number>100</number>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>20</y>
-      <width>160</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Midterm 1</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSlider" name="horizontalSlider_2">
-       <property name="maximum">
-        <number>100</number>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSpinBox" name="midterm1spinbox">
-       <property name="maximum">
-        <number>100</number>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QLabel" name="overall_grade">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>130</y>
+      <x>550</x>
+      <y>330</y>
       <width>104</width>
       <height>21</height>
      </rect>
@@ -99,11 +27,11 @@
      <string>0.0</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="overall_gradelabel">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>130</y>
+      <x>440</x>
+      <y>330</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -112,13 +40,363 @@
      <string>Overall Score</string>
     </property>
    </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>20</y>
+      <width>161</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="mt1label">
+       <property name="text">
+        <string>Midterm 1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="mt1slider">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="mt1spinbox">
+       <property name="maximum">
+        <number>100</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>110</y>
+      <width>161</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="mt2label">
+       <property name="text">
+        <string>Midterm 2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="mt2slider">
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="mt2spinbox">
+       <property name="maximum">
+        <number>100</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>200</y>
+      <width>161</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="finallabel">
+       <property name="text">
+        <string>Final</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="finalslider">
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="finalspinbox">
+       <property name="maximum">
+        <number>100</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>231</width>
+      <height>264</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="hw1label">
+         <property name="text">
+          <string>Hw1</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="hw1slider">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="hw1spinbox">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="hw2label">
+         <property name="text">
+          <string>Hw2</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="hw2slider">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="hw2spinbox">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="hw3label">
+         <property name="text">
+          <string>Hw3</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="hw3slider">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="hw3spinbox">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="hw4label">
+         <property name="text">
+          <string>Hw4</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="hw4slider">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="hw4spinbox">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLabel" name="hw5label">
+         <property name="text">
+          <string>Hw5</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="hw5slider">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="hw5spinbox">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="hw6label">
+         <property name="text">
+          <string>Hw6</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="hw6slider">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="hw6spinbox">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QLabel" name="hw7label">
+         <property name="text">
+          <string>Hw7</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="hw7slider">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="hw7spinbox">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="QLabel" name="hw8label">
+         <property name="text">
+          <string>Hw8</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="hw8slider">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="hw8spinbox">
+         <property name="maximum">
+          <number>100</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>659</width>
      <height>22</height>
     </rect>
    </property>
@@ -135,5 +413,358 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>hw1slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw1spinbox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>104</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>221</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw1spinbox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw1slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>156</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw2slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw2spinbox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>137</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>214</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw2spinbox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw2slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>217</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>159</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw3slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw3spinbox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>198</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw3spinbox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw3slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>204</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>167</x>
+     <y>138</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw4slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw4spinbox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>143</x>
+     <y>174</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>205</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw4spinbox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw4slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>168</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw5slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw5spinbox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>163</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>219</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw5spinbox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw5slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>160</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw6slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw6spinbox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>236</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>211</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw6spinbox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw6slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>246</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>155</x>
+     <y>240</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw7slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw7spinbox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>152</x>
+     <y>267</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>212</x>
+     <y>263</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw7spinbox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw7slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>210</x>
+     <y>272</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>173</x>
+     <y>273</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw8slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw8spinbox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>147</x>
+     <y>301</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hw8spinbox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hw8slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>211</x>
+     <y>309</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>164</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mt1slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mt1spinbox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>356</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>347</x>
+     <y>122</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mt1spinbox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mt1slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>405</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>404</x>
+     <y>95</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mt2slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mt2spinbox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>378</x>
+     <y>181</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>368</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mt2spinbox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mt2slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>388</x>
+     <y>219</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>finalslider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>finalspinbox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>341</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>finalspinbox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>finalslider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>358</x>
+     <y>303</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>356</x>
+     <y>276</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
