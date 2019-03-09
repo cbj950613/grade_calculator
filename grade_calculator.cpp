@@ -9,9 +9,9 @@ grade_calculator::grade_calculator(QWidget *parent) :
     connect(ui->horizontalSlider,SIGNAL(valueChanged(int)),ui->hw1spinbox,SLOT(setValue(int)));
     connect(ui->horizontalSlider_2,SIGNAL(valueChanged(int)),ui->midterm1spinbox,SLOT(setValue(int)));
     QObject::connect(ui->hw1spinbox,SIGNAL(valueChanged(int)),
-                         this,SLOT(update_overall(int)));
+                         this,SLOT(update_overall()));
     QObject::connect(ui->midterm1spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall(int)));
+                     this,SLOT(update_overall()));
 }
 
 grade_calculator::~grade_calculator()
