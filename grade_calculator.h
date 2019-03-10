@@ -17,6 +17,8 @@ public:
     ~grade_calculator();
 private slots:
     void update_overall();
+    void on_comboBox_activated(const QString &arg1);
+
 private:
     Ui::grade_calculator *ui;
 };

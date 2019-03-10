@@ -6,8 +6,42 @@ grade_calculator::grade_calculator(QWidget *parent) :
     ui(new Ui::grade_calculator)
 {
     ui->setupUi(this);
+    if(ui->comboBox->currentText()=="PIC10B"){
+        QObject::connect(ui->hw1spinbox,SIGNAL(valueChanged(int)),
+                             this,SLOT(update_overall()));
+        QObject::connect(ui->hw2spinbox,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
+        QObject::connect(ui->hw3spinbox,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
+        QObject::connect(ui->hw4spinbox,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
+        QObject::connect(ui->hw5spinbox,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
+        QObject::connect(ui->hw6spinbox,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
+        QObject::connect(ui->hw7spinbox,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
+        QObject::connect(ui->hw8spinbox,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
+        QObject::connect(ui->mt1spinbox,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
+        QObject::connect(ui->mt2spinbox,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
+        QObject::connect(ui->finalspinbox,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_overall()));
+        QObject::connect(ui->schemaa,SIGNAL(clicked()),
+                         this,SLOT(update_overall()));
+        QObject::connect(ui->schemab,SIGNAL(clicked()),
+                         this,SLOT(update_overall()));
+    }
+    if(ui->comboBox->currentText()=="PIC10C")
+    {
+    close();
+    }
 
-    QObject::connect(ui->hw1spinbox,SIGNAL(valueChanged(int)),
+    //ui->schemaa->setChecked(1);
+
+   /* QObject::connect(ui->hw1spinbox,SIGNAL(valueChanged(int)),
                          this,SLOT(update_overall()));
     QObject::connect(ui->hw2spinbox,SIGNAL(valueChanged(int)),
                      this,SLOT(update_overall()));
@@ -34,36 +68,7 @@ grade_calculator::grade_calculator(QWidget *parent) :
     QObject::connect(ui->schemab,SIGNAL(clicked()),
                      this,SLOT(update_overall()));
 
-    ui->schemaa->setChecked(1);
-
-    QObject::connect(ui->hw1spinbox,SIGNAL(valueChanged(int)),
-                         this,SLOT(update_overall()));
-    QObject::connect(ui->hw2spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->hw3spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->hw4spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->hw5spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->hw6spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->hw7spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->hw8spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->mt1spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->mt2spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->finalspinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->schemaa,SIGNAL(clicked()),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->schemab,SIGNAL(clicked()),
-                     this,SLOT(update_overall()));
-
-    ui->schemab->setChecked(1);
+    ui->schemab->setChecked(1);*/
 }
 
 grade_calculator::~grade_calculator()
@@ -94,4 +99,9 @@ void grade_calculator::update_overall() {
         overall = hw_total/32+exam*.3+f*.44;
     }
     ui->overall_grade->setText(QString::number(overall));
+}
+
+void grade_calculator::on_comboBox_activated(const QString &arg1)
+{
+
 }
