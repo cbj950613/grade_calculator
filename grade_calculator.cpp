@@ -6,7 +6,6 @@ grade_calculator::grade_calculator(QWidget *parent) :
     ui(new Ui::grade_calculator)
 {
     ui->setupUi(this);
-    if(ui->comboBox->currentText()=="PIC10B"){
         QObject::connect(ui->hw1spinbox,SIGNAL(valueChanged(int)),
                              this,SLOT(update_overall()));
         QObject::connect(ui->hw2spinbox,SIGNAL(valueChanged(int)),
@@ -33,11 +32,6 @@ grade_calculator::grade_calculator(QWidget *parent) :
                          this,SLOT(update_overall()));
         QObject::connect(ui->schemab,SIGNAL(clicked()),
                          this,SLOT(update_overall()));
-    }
-    if(ui->comboBox->currentText()=="PIC10C")
-    {
-    close();
-    }
 
     //ui->schemaa->setChecked(1);
 
@@ -101,7 +95,3 @@ void grade_calculator::update_overall() {
     ui->overall_grade->setText(QString::number(overall));
 }
 
-void grade_calculator::on_comboBox_activated(const QString &arg1)
-{
-
-}
