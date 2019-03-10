@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QObject>
+#include <QMessageBox>
 
 namespace Ui {
 class grade_calculator;
@@ -17,6 +18,9 @@ public:
     ~grade_calculator();
 private slots:
     void update_overall();
+    void update_C();
+    void on_pushButton_clicked();
+
 private:
     Ui::grade_calculator *ui;
 };

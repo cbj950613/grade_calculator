@@ -33,43 +33,51 @@ grade_calculator::grade_calculator(QWidget *parent) :
         QObject::connect(ui->schemab,SIGNAL(clicked()),
                          this,SLOT(update_overall()));
 
-    //ui->schemaa->setChecked(1);
+    ui->schemaa->setChecked(1);
 
-   /* QObject::connect(ui->hw1spinbox,SIGNAL(valueChanged(int)),
-                         this,SLOT(update_overall()));
-    QObject::connect(ui->hw2spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->hw3spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->hw4spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->hw5spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->hw6spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->hw7spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->hw8spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->mt1spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->mt2spinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->finalspinbox,SIGNAL(valueChanged(int)),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->schemaa,SIGNAL(clicked()),
-                     this,SLOT(update_overall()));
-    QObject::connect(ui->schemab,SIGNAL(clicked()),
-                     this,SLOT(update_overall()));
+    QObject::connect(ui->a1spinbox,SIGNAL(valueChanged(int)),
+                         this,SLOT(update_C()));
+    QObject::connect(ui->a2spinbox,SIGNAL(valueChanged(int)),
+                     this,SLOT(update_C()));
+    QObject::connect(ui->a3spinbox,SIGNAL(valueChanged(int)),
+                     this,SLOT(update_C()));
+    QObject::connect(ui->mt1spinbox_2,SIGNAL(valueChanged(int)),
+                     this,SLOT(update_C()));
+    QObject::connect(ui->fpspinbox,SIGNAL(valueChanged(int)),
+                     this,SLOT(update_C()));
+    QObject::connect(ui->finalspinbox_2,SIGNAL(valueChanged(int)),
+                     this,SLOT(update_C()));
+    QObject::connect(ui->schemaa_2,SIGNAL(clicked()),
+                     this,SLOT(update_C()));
+    QObject::connect(ui->schemab_2,SIGNAL(clicked()),
+                     this,SLOT(update_C()));
 
-    ui->schemab->setChecked(1);*/
+    ui->schemaa_2->setChecked(1);
+
 }
 
 grade_calculator::~grade_calculator()
 {
     delete ui;
 }
+void grade_calculator::update_C()
+{
+    double a1 = ui->a1spinbox->value();
+    double a2 = ui->a2spinbox->value();
+    double a3 = ui->a3spinbox->value();
+    double mt1 = ui->mt1spinbox_2->value();
+    double f = ui->finalspinbox_2->value();
+    double p = ui->fpspinbox->value();
 
+    double a_total = a1 + a2 + a3;
+    double overall = 0;
+    if(ui->schemaa_2->isChecked())
+        overall = .05*a_total + mt1/4 + f*.3 + p*.35;
+    if(ui->schemab_2->isChecked()){
+        overall = .13*a_total/3 + .5*f + .35*p;
+    }
+    ui->overall_grade_2->setText(QString::number(overall));
+}
 void grade_calculator::update_overall() {
     double hw1 = ui->hw1spinbox->value();
     double hw2 = ui->hw2spinbox->value();
@@ -95,3 +103,8 @@ void grade_calculator::update_overall() {
     ui->overall_grade->setText(QString::number(overall));
 }
 
+
+void grade_calculator::on_pushButton_clicked()
+{
+    QMessageBox::about(this,"PIC10B", "There will be 7 or 8 homework assignments throughout the quarter. No late homework will be accepted for any reason but your lowest homework score will be dropped.");
+}
